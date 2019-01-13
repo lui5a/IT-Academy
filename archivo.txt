@@ -9,4 +9,6 @@ Just purse your lips and whistle -- that's the thing!
 
 primer texto del archivo version1
 
-cambio de texto en archivo branch1
+
+cambio de texto en archivo branch1 del ejercicio
+
