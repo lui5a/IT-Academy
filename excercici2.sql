@@ -23,9 +23,9 @@ WHERE a.Cancelled > 0
 GROUP BY b.Description
 ORDER BY cancelled DESC;
 
-SELECT TailNum, MAX(Distance) 
+SELECT FlightNum, TailNum, SUM(Distance) 
 FROM usairlineflights.flights
-GROUP BY TailNum, Distance
+GROUP BY FlightNum, TailNum, Distance
 ORDER BY Distance DESC
 LIMIT 10;
 
@@ -35,4 +35,3 @@ LEFT JOIN usairlineflights.carriers b on a.UniqueCarrier = b.Code
 GROUP BY b.Description
 HAVING COUNT(a.ArrDelay) > 10
 ORDER BY Delay DESC;
-
