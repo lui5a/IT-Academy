@@ -1,12 +1,7 @@
 SELECT COUNT(*)
 FROM usairlineflights.flights;
 
-
-SELECT AVG(DepDelay),Origin
-FROM usairlineflights.flights
-GROUP BY Origin;
-
-SELECT AVG(ArrDelay),Origin
+SELECT AVG(DepDelay), AVG(ArrDelay),Origin
 FROM usairlineflights.flights
 GROUP BY Origin;
 
@@ -15,28 +10,29 @@ FROM usairlineflights.flights
 GROUP BY Origin, Year, Month
 ORDER BY  Origin, Year , Month ASC;
 
-SELECT a.city, f.Year, f.Month, AVG(f.ArrDelay) Average
-FROM usairlineflights.flights f
-INNER JOIN usairlineflights.airports a on a.iata = f.Origin
-GROUP BY a.city, f.Year, f.Month
-ORDER BY  a.city, f.Year, f.Month ASC;
+SELECT b.city, a.Year, a.Month, AVG(a.ArrDelay) Average
+FROM usairlineflights.flights a
+LEFT JOIN usairlineflights.airports b on b.iata = a.Origin
+GROUP BY b.city, a.Year, a.Month
+ORDER BY  b.city, a.Year, a.Month ASC;
 
-
-SELECT a.Description, SUM(f.Cancelled) cancelled
-FROM usairlineflights.flights f
-INNER JOIN usairlineflights.carriers a on f.UniqueCarrier = a.Code
-GROUP BY a.Description
+SELECT b.Description, COUNT(*) cancelled
+FROM usairlineflights.flights a
+LEFT JOIN usairlineflights.carriers b on a.UniqueCarrier = b.Code
+WHERE a.Cancelled > 0
+GROUP BY b.Description
 ORDER BY cancelled DESC;
 
-SELECT FlightNum, MAX(Distance) 
+SELECT TailNum, MAX(Distance) 
 FROM usairlineflights.flights
-GROUP BY FlightNum, Distance
+GROUP BY TailNum, Distance
 ORDER BY Distance DESC
 LIMIT 10;
 
-SELECT  a.Description, f.ArrDelay
-FROM usairlineflights.flights f
-INNER JOIN usairlineflights.carriers a on f.UniqueCarrier = a.Code
-WHERE f.ArrDelay > 10
-GROUP BY a.Description, f.ArrDelay
-ORDER BY f.ArrDelay DESC;
+SELECT b.Description, COUNT( a.ArrDelay) Delay
+FROM usairlineflights.flights a
+LEFT JOIN usairlineflights.carriers b on a.UniqueCarrier = b.Code
+GROUP BY b.Description
+HAVING COUNT(a.ArrDelay) > 10
+ORDER BY Delay DESC;
+
