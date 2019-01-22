@@ -25,8 +25,8 @@ ORDER BY cancelled DESC;
 
 SELECT FlightNum, TailNum, SUM(Distance) 
 FROM usairlineflights.flights
-GROUP BY FlightNum, TailNum, Distance
-ORDER BY Distance DESC
+GROUP BY FlightNum, TailNum
+ORDER BY SUM(Distance) DESC
 LIMIT 10;
 
 SELECT b.Description, COUNT( a.ArrDelay) Delay
