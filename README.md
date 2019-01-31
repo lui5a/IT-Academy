@@ -9,3 +9,7 @@ https://github.com/lui5a/git-exercici/blob/master/excercici2.sql
 
 Ejercicio 1 Diagramas 
 https://github.com/lui5a/git-exercici/blob/master/Exercici_Diagrames_de_Classes_1.pdf
+
+
+Ejercicio 2 Diagramas
+https://github.com/lui5a/git-exercici/blob/master/Exercici_Diagrames_de_Classes_2.pdf
