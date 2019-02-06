@@ -13,3 +13,7 @@ https://github.com/lui5a/git-exercici/blob/master/Exercici_Diagrames_de_Classes_
 
 Ejercicio 2 Diagramas
 https://github.com/lui5a/git-exercici/blob/master/Exercici_Diagrames_de_Classes_2.pdf
+
+
+Ejercicio html+css
+https://github.com/lui5a/git-exercici/tree/master/my_favorite_books
