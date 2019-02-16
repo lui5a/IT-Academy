@@ -17,3 +17,7 @@ https://github.com/lui5a/git-exercici/blob/master/Exercici_Diagrames_de_Classes_
 
 Ejercicio html+css
 https://github.com/lui5a/git-exercici/tree/master/my_favorite_books
+
+
+Ejercicio 1 Javascript
+https://github.com/lui5a/git-exercici/blob/master/name.js
