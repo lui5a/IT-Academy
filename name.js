@@ -1,52 +1,36 @@
 //FASE 1
 
-
-var nombre = ["L","u","i","s","a"];
+var nombre = ["L","u","i","s","a","a","A"];
 
 for ( var i = 0; i< nombre.length; i++){
   console.log(nombre[i]);
 }
 
-//FASE 2
-function contains(vocales, letra)
-	{
-		if(vocales.indexOf(letra) > -1)
-		{
-		console.log('vocal');
-	}else{
-		console.log('consonante');
-		}
-	}
-var vocal = ['a','e','i','o','u']
+//FASE 2 + Extra
 
-contains(vocal, 'L');
-contains(vocal, 'u');
-contains(vocal, 'i');
-contains(vocal, 's');
-contains(vocal, 'a');
+var vocal = ['a','e','i','o','u' ];
 
-
-//EXTRA
-
-nombre.forEach(function(element){ 
-  
-  if(isNaN(element) === true )
-  {console.log( element + ": " + 'es una letra');
-  }else{
-    console.log(element + ": " +'Els noms de persones no contenen números!.');
-  } 
+nombre.forEach(function contains(letra){
+  if((vocal.indexOf(letra.toLowerCase()) > -1) && (isNaN(letra) === true)) 
+    {
+      console.log(letra + ": " +'vocal');
+    }else if (isNaN(letra) ===true){
+      console.log(letra + ": " +'consonant');
+    }else {
+      console.log(letra + ": " +'Els noms de persones no contenen números!.');
+    }
+    
 });
 
 //FASE 3
 
-function frequencies(a)
-{
-    return new Map([...new Set(a)].map(
-        x => [x, a.filter(y => y === x).length]
-    ));
+function frecuencias(num){
+  this[num.toLowerCase()] = (++this[num.toLowerCase()] || 1);
+  return this;
 }
+   
+console.log(nombre.map(frecuencias, {}).pop());
 
-frequencies(nombre).forEach((valor, letra) => console.log(letra + ' = ' + valor));
 
 //FASE 4
 
@@ -54,7 +38,9 @@ var apellido = ["T", "e", "n", "o", "r", "i", "o"];
 
 var myFullName = [];
 
-myFullName.push(nombre + ", ," + apellido);
+myFullName.push(...nombre,'',...apellido);
 
 console.log(myFullName);
+
+
 
