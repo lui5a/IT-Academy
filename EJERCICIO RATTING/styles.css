@@ -1,0 +1,47 @@
+h1{
+	font-family: sans-serif;
+	color: #2C98F0;
+	border: 1px solid red;
+
+}
+
+span{
+    display: inline-block;
+    text-align: center;
+    font-size: 48px; 
+    direction: rtl;
+    color: #ff8900;
+}
+
+#clearall{
+	height: 800px;
+	text-align: center;
+}
+
+span i:hover{
+	color: #2C98F0;
+}
+
+
+.b1icon:hover ~ i{
+		color: #2C98F0;
+}
+
+.b2icon:hover ~ i{
+		color: #2C98F0;
+}
+
+.b3icon:hover ~ i{
+		color: #2C98F0;
+}
+
+.b4icon:hover ~ i{
+		color: #2C98F0;
+}
+
+.b5icon:hover ~ i{
+		color: #2C98F0;
+}
+
+
+
