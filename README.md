@@ -21,3 +21,6 @@ https://github.com/lui5a/git-exercici/tree/master/my_favorite_books
 
 Ejercicio 1 Javascript
 https://github.com/lui5a/git-exercici/blob/master/name.js
+
+Ejercicio 2 Javascript Ratting
+https://github.com/lui5a/git-exercici/tree/master/EJERCICIO%20RATTING
