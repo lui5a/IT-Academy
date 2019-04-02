@@ -27,3 +27,9 @@ https://github.com/lui5a/git-exercici/tree/master/EJERCICIO%20RATTING
 
 Ejecicio Vehiculos Typescript
 https://github.com/lui5a/git-exercici/tree/master/VehiclesFE-master
+
+Ejercicio Animación Css
+https://github.com/lui5a/git-exercici/tree/master/stripes
+
+Ejercicio Bootstrap y Validación formulario JS
+https://github.com/lui5a/git-exercici/tree/master/my_favorite_books_validacion_bootstrap
