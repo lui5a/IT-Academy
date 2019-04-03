@@ -33,3 +33,6 @@ https://github.com/lui5a/git-exercici/tree/master/stripes
 
 Ejercicio Bootstrap y Validación formulario JS
 https://github.com/lui5a/git-exercici/tree/master/my_favorite_books_validacion_bootstrap
+
+Ejercicio Jquery Rest Api Jokes
+https://github.com/lui5a/git-exercici/tree/master/REST_API_JOKES
