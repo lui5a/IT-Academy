@@ -1,5 +1,6 @@
 let car: Car;
 
+
 function createCar(plate:string,brand:string,color:string){
     return new Car (plate,color,brand);
 }
@@ -15,21 +16,23 @@ function submitCar() {
         const colorInput = <HTMLInputElement>document.getElementById("colorInput");
 
      	car = createCar(plateInput.value,brandInput.value,colorInput.value);
-     	showVehicle();
+    	showVehicle();
      	showWheelForm();
     }
 }
 
 function showVehicle(){
+    const carResult = <HTMLInputElement>document.getElementById("result-car-form");
 	const carTitle = <HTMLInputElement>document.getElementById("carTitle");
 	const plateOutput = <HTMLInputElement>document.getElementById("plateOutput");
     const brandOutput = <HTMLInputElement>document.getElementById("brandOutput");
     const colorOutput = <HTMLInputElement>document.getElementById("colorOutput");
 
+    carResult.style.display = "block";
     carTitle.innerText = "Car:";
-    plateOutput.innerText = "Plate: " + car.plate;
-    brandOutput.innerText = "Brand: " + car.brand;
-    colorOutput.innerText = "Color: " + car.color;
+    plateOutput.innerText = car.plate;
+    brandOutput.innerText = car.brand;
+    colorOutput.innerText = car.color;
 
 }
 
@@ -88,17 +91,19 @@ function submitWheelForm(){
 
 
 function showWheels(){
+    const wheelResult = <HTMLInputElement>document.getElementById("result-wheels-form");
 	const wheelTitle = <HTMLInputElement>document.getElementById("wheelTitle");
 	const wheelOutput1 = <HTMLInputElement>document.getElementById("wheelOutput1");
 	const wheelOutput2 = <HTMLInputElement>document.getElementById("wheelOutput2");
 	const wheelOutput3 = <HTMLInputElement>document.getElementById("wheelOutput3");
 	const wheelOutput4 = <HTMLInputElement>document.getElementById("wheelOutput4");
 
+    wheelResult.style.display = "block";
     wheelTitle.innerText = "Wheels:";
-    wheelOutput1.innerText = "Wheel 1:  " + "Brand: " + car.wheels[0].brand + "  Diameter: " + car.wheels[0].diameter;
-    wheelOutput2.innerText = "Wheel 2:  " + "Brand: " + car.wheels[1].brand + "  Diameter: " + car.wheels[1].diameter;
-    wheelOutput3.innerText = "Wheel 3:  " + "Brand: " + car.wheels[2].brand + "  Diameter: " + car.wheels[2].diameter;
-    wheelOutput4.innerText = "Wheel 4:  " + "Brand: " + car.wheels[3].brand + "  Diameter: " + car.wheels[3].diameter;
+    wheelOutput1.innerText = "Brand: " + car.wheels[0].brand + "  Diameter: " + car.wheels[0].diameter;
+    wheelOutput2.innerText = "Brand: " + car.wheels[1].brand + "  Diameter: " + car.wheels[1].diameter;
+    wheelOutput3.innerText = "Brand: " + car.wheels[2].brand + "  Diameter: " + car.wheels[2].diameter;
+    wheelOutput4.innerText = "Brand: " + car.wheels[3].brand + "  Diameter: " + car.wheels[3].diameter;
 }
 
 function showWheelForm(){
@@ -108,6 +113,14 @@ function showWheelForm(){
 	carWheel.style.display = "block";
 
 }
+
+
+window.onload = function (){  
+const carResult = <HTMLInputElement>document.getElementById("result-car-form");
+carResult.style.display = "none";
+const wheelResult = <HTMLInputElement>document.getElementById("result-wheels-form");
+wheelResult.style.display = "none";
+};
 
 
 

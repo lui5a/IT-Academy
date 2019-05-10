@@ -4,23 +4,35 @@
 <head>
 	<title>Jokes</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Ultra" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
+<body class="main">
 
-<div class="container bg-dark py-5 px-5 rounded">
+
+<div class="container py-5 px-5 rounded">
 	<div class="row">
-		<div class="col bg-light text-center py-5 px-5 rounded">	
+		<div class="col py-5">
+			
+			<h1>Chuck Norris Rest Api</h1>
 
-		<p id="jokegoeshere"></p>	
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-center py-1 px-5 rounded" id="jokecontainer">	
+			<img src="imgs/chuck_icon-01.svg" width="150">
+			<p id="jokegoeshere"></p>	
 
 		</div>
 	</div>	
 	<div class="row">
 		<div class="col text-center py-5 px-5">
-			<button type="button" class="btn btn-light" id="refreshjoke">Tell me a joke</button>
+			<button type="button" class="btn" id="refreshjoke">Tell me a joke</button>
 		</div>
 	</div>
 </div>
